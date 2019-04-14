@@ -1,4 +1,5 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is to build a gallery app based off React.
+Author: Alfy Hushairi
 
 ## Available Scripts
 
