@@ -2,7 +2,8 @@ import React from 'react';
 
 const Header = (props) => (
   <div className = 'header'>
-    <h1>This is the header!</h1>
+    <h1>Search images from Flickr</h1>
+    <p>A project by Alfy Hushairi</p>
   </div>
 );
 

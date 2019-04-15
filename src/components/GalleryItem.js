@@ -1,12 +1,16 @@
 import React from 'react';
-import '../styles/GalleryItem.css';
-import partisan from '../img/partisan.jpg'
 
-const GalleryItem = (props) => (
-  <div className ='galleryItem'>
-    {/*props.playerName*/}
-    <img src= {partisan} alt="Partisan" height="267" width="200"></img>
-  </div>
-);
+const GalleryItem = (props) => {
+
+  const { farm, server, id, secret } = props.image
+
+  return (
+    <div className ='galleryItem'>
+      <img src= {`https://farm${farm}.staticflickr.com/${server}/${id}_${secret}.jpg`} alt="Flickr" height="200" width="355"></img>
+    </div>
+  )
+
+
+};
 
 export default GalleryItem;

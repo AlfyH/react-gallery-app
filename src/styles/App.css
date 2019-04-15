@@ -31,3 +31,33 @@
     transform: rotate(360deg);
   }
 }
+
+.galleryItem {
+  width: auto ;
+  float: left;
+  padding: 10px;
+}
+
+.galleryTitle {
+  text-align: left;
+  width: 1065px;
+  margin: 20px auto;
+}
+
+.galleryImages {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.navDiv ul {
+  background-color: black;
+  margin: 0;
+  padding: 10px 0px 10px 140px;
+}
+
+ul li {
+  display: inline;
+  padding: 20px;
+}

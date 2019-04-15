@@ -3,34 +3,30 @@ import GalleryItem from './GalleryItem';
 
 class GalleryCont extends Component {
 
-  state = {
-    players: [
-      {
-        name: "Alfy",
-        id: 1
-      },
-      {
-        name: "Emma",
-        id: 1
-      },
-      {
-        name: "Shirin",
-        id: 2
-      }
-    ]
-  };
+  constructor() {
+    super();
+  }
+
+searchText = () => {
+
+    let searchResults = this.props.searchTag;
+    if (searchResults != "") {
+      searchResults = `You searched for : ${this.props.searchTag}`;
+    }
+    return searchResults;
+  }
 
   render () {
+    let imageArray = this.props.imageArray.photo;
+    let galleryRender = imageArray.map((image, index) => <GalleryItem image={image} key={image.id}/>);
+
+
     return (
       <div className = 'galleryCont'>
-        <span className = 'galleryTitle'> Pictures of trees. </span>
-        {this.state.players.map ( (player, index) =>
-        <GalleryItem
-          playerName = {player.name}
-          id = {player.id}
-          index = {index}
-         />
-        )}
+        <p className = 'galleryTitle'> {this.searchText()} </p>
+        <div className = 'galleryImages'>
+          {galleryRender}
+        </div>
       </div>
     )};
 }
