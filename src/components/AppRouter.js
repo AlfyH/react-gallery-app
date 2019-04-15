@@ -1,7 +1,7 @@
 import React from 'react'
 import Home from './Home'
 import Search from './Search'
-import { BrowserRouter as Router, Route, Link, Redirect } from "react-router-dom";
+import { HashRouter as Router, Route, Link, Redirect } from "react-router-dom";
 
 
 const AppRouter = (props) => {
@@ -20,7 +20,8 @@ const AppRouter = (props) => {
         </nav>
       </div>
       <Route exact path="/" component={Home} />
-      <Route path="/search" component={Search} />
+      <Route path="/home" component={Home} />
+      <Route path="/search" component={Home} />
     </Router>
   );
 }
