@@ -1,5 +1,6 @@
 import React from 'react'
 import Home from './Home'
+import Search from './Search'
 import { BrowserRouter as Router, Route, Link, Redirect } from "react-router-dom";
 
 
@@ -18,9 +19,8 @@ const AppRouter = (props) => {
           </ul>
         </nav>
       </div>
-      <Route exact path="/" render={() => (<Redirect to="/home" />)} />
-      <Route path="/home" exact component={Home} />
-      <Route path="/search" exact component={Home} />
+      <Route exact path="/" component={Home} />
+      <Route path="/search" component={Search} />
     </Router>
   );
 }
